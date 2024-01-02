@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List App</title>
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  #app {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  button {
+    margin-top: 10px;
+  }
+</style>
+<body>
+  <div class="app">
+    <h1>To Do List App</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+ <script>
+  function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    if (taskInput.value.trim() !== '') {
+      const taskItem = document.createElement('li');
+      taskItem.textContent = taskInput.value;
+      taskList.appendChild(taskItem);
+      taskInput.value = '';
+    }
+  }
+ </script> 
+</body>
+</html>

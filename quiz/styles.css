@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+#app {
+  max-width: 600px;
+  margin: 50px auto;
+}
+#quiz-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+#options {
+  margin-top: 15px;
+}
+button {
+  margin-top: 10px;
+}
